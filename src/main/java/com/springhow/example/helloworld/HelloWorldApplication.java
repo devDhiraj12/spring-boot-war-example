@@ -6,7 +6,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @Controller
@@ -18,19 +17,14 @@ public class HelloWorldApplication extends SpringBootServletInitializer {
         return application.sources(HelloWorldApplication.class);
     }
 
-    public static void main(String[] args) {
-        SpringApplication.run(HelloWorldApplication.class);
-    }
+        public static void main(String[] args) {
+            SpringApplication.run(HelloWorldApplication.class);
+        }
 
-//    @ResponseBody
-//    @RequestMapping("/")
-//    String helloWorld() {
-//        return "Hello Dhiraj!";
-//    }
 
     @RequestMapping("/")
-    String quickinfra() {
-        return "/asg";
+    String helloWorld() {
+        return "home";
     }
 
 }
