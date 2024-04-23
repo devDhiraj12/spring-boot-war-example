@@ -4,10 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 @SpringBootApplication
 public class HelloWorldApplication extends SpringBootServletInitializer {
 
@@ -20,10 +22,15 @@ public class HelloWorldApplication extends SpringBootServletInitializer {
         SpringApplication.run(HelloWorldApplication.class);
     }
 
+//    @ResponseBody
+//    @RequestMapping("/")
+//    String helloWorld() {
+//        return "Hello Dhiraj!";
+//    }
 
     @RequestMapping("/")
-    String helloWorld() {
-        return "Hello Dhiraj!";
+    String quickinfra() {
+        return "/asg";
     }
 
 }
